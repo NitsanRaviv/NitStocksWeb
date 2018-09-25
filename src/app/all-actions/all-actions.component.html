@@ -1,0 +1,44 @@
+<table mat-table [dataSource]="allActions" class="mat-elevation-z8">
+
+		<ng-container matColumnDef="type">
+			<th mat-header-cell *matHeaderCellDef></th>
+			<td mat-cell *matCellDef="let element">
+				<div> 
+					<label *ngIf="!checkIfSell(element.type)">
+						<img class="typeFit" src="src/assets/buy.png"> </label>
+					<label *ngIf="checkIfSell(element.type)">
+						<img class="typeFit" src="src/assets/sell.png"> </label>
+				</div>
+			</td>
+		</ng-container>
+		
+		<ng-container matColumnDef="Stock Name">
+			<th mat-header-cell *matHeaderCellDef> Stock Name </th>
+			<td mat-cell *matCellDef="let element"> {{element.stockName}} </td>
+		</ng-container>
+		
+		
+		<ng-container matColumnDef="Open Price">
+			<th mat-header-cell *matHeaderCellDef> Open Price </th>
+			<td mat-cell *matCellDef="let element"> {{element.openedPrice | currency}} </td>
+		</ng-container>
+		
+		
+		<ng-container matColumnDef="Action Price">
+			<th mat-header-cell *matHeaderCellDef> Action Price </th>
+			<td mat-cell *matCellDef="let element"> {{element.priceAtAction | number | currency}} </td>
+		</ng-container>
+
+		<ng-container matColumnDef="Action Quantity">
+				<th mat-header-cell *matHeaderCellDef> Action Quantity </th>
+				<td mat-cell *matCellDef="let element"> {{element.quantity}} </td>
+		</ng-container>
+
+		<ng-container matColumnDef="Profit / Loss">
+				<th mat-header-cell *matHeaderCellDef> Profit / Loss </th>
+				<td mat-cell *matCellDef="let element"> {{calculateProfit(element) | number | currency}} </td>
+		</ng-container>
+		
+		<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+		<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+		</table>

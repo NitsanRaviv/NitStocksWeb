@@ -1,0 +1,43 @@
+<div class="card">
+    <mat-card class="stockCardTrade">
+        <mat-card-header class="stockHeader">
+          <mat-card-title class="stockName">{{stockName}}</mat-card-title> 
+        </mat-card-header><mat-divider class="divider"></mat-divider>
+            
+        <mat-card-content class="stockDetails">
+          <div>
+              <span class="priceHeaders"> Price: </span> 
+              <span class="priceValue">{{stockCurrentPrice | number | currency}}</span>
+          </div> 
+          <div>
+                <span class="priceHeaders"> Opened Price: </span>  
+                <span class="priceValue">{{stockOpenedPrice | currency}}</span>
+          </div> 
+          <div>
+            <span class="priceHeaders"> Your quantity: </span>  
+            <span class="priceValue">{{stockQuantity}}</span>
+          </div> 
+        </mat-card-content>
+      </mat-card>
+</div>
+
+<div class="pad"></div>
+
+<form [formGroup]="tradeForm" (ngSubmit)="makeTrade()">  
+  <label class="field a-field a-field_a1 page__field">
+      <input class="field__input" placeholder="quantity" formControlName='quantity'/>
+      <span class="field__label-wrap">
+        <span class="field__label">Enter to insert quantity</span>
+      </span>
+  </label>
+  <div> 
+    <span class="notValid" *ngIf="!tradeForm.controls['quantity'].valid">
+       Required, Only numbers </span>
+  <div class="pad">
+    <button class="button" type="submit" [disabled]="tradeForm.invalid">
+            <span *ngIf="checkIfSell()">Sell</span>
+            <span *ngIf="!checkIfSell()">Buy</span>  
+    </button>
+  </div>
+</div> 
+</form>

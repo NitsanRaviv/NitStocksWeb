@@ -1,0 +1,78 @@
+.stockCard{
+  max-width: 270px;
+  border-radius: 15px;
+  background-color: #fbfbfb;
+}
+
+.stockName{
+  font-size: 150%;
+  align-items: center;
+  font-family: Lucida Grande;
+  color: #23a1c8;
+}
+
+.arrowFit{
+  width: 25px;
+  height: 25px;
+}
+
+.arrow{
+  padding-left: 19px;
+}
+
+.button
+{
+  font-size: 20px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 200;
+  margin:  auto;
+  width: 100px;
+  height:30px;
+  background: rgb(125, 204, 250);
+  border: 1px solid rgba(0, 183, 255, 0.87);
+  color: #FFF;
+}
+
+.button:hover, .button:active 
+{
+  color: rgb(125, 204, 250);
+  border-color: rgba(0, 183, 255, 0.87);
+  background: #FFF;
+}
+
+.button span 
+{
+  position: relative;
+  padding-right: 0;
+  transition: padding-right 0.5s;
+}
+
+.button span:after 
+{
+  content: ' ';  
+  position: absolute;
+  top: 0;
+  right: -15px;
+  opacity: 0;
+  width: 10px;
+  height: 10px;
+  margin-top: -7px;
+  border: 3px solid #FFF;
+  border-top: currentColor;
+  border-right: currentColor;
+  transform: rotate(-45deg);
+}
+
+.button:hover span, .button:active span 
+{
+  padding-right: 30px;
+}
+
+.button:hover span:after, .button:active span:after 
+{
+  transition: opacity 0.5s, top 0.5s, right 0.5s;
+  opacity: 1;
+  border-color: rgb(125, 204, 250);;
+  right: 0;
+  top: 50%;
+}

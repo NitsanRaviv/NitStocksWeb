@@ -1,0 +1,47 @@
+.navbar {
+    margin-bottom: 0;
+    border: 0;
+    font-size: 12px;
+    letter-spacing: 3px;
+    opacity: 0.9;
+}
+
+.logoFit{ 
+    width: 160px;
+    height: 60px;
+    padding-bottom: 20px;
+}
+
+#banner {
+    height: 35rem !important;
+}
+
+#banner video {
+    transform: translateX(50%) translateY(70%);
+    bottom: 40%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    right: 50%;
+}
+
+#banner:after {
+    background: linear-gradient( #0491a3 0%, #b1b1b1 70%);
+    content: ' ';
+    height: 100%;
+    left: 0;
+    opacity: 0.75;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.wrapper {
+    padding: 8rem 0 6rem 0 ;    
+}
+
+.footer{
+    padding: 10rem 0 15rem 0 ;
+    background-image: url("src/assets/footer.png");
+}
+ 

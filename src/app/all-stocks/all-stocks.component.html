@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-sm-4" *ngFor= "let stock of stocks">
+      <mat-card class="stockCard">
+          <mat-card-header class="stockHeader">
+            <mat-card-title class="stockName">{{stock.name}}</mat-card-title> 
+             <div class="arrow"> 
+              <label *ngIf="stockRising(stock.openedPrice,stock.currentPrice)">
+                <img class="arrowFit" src="src/assets/upArrow.png"> </label>
+              <label *ngIf="!stockRising(stock.openedPrice,stock.currentPrice)">
+                <img class="arrowFit" src="src/assets/downArrow.png"> </label>
+             </div>
+          </mat-card-header><mat-divider class="divider"></mat-divider>
+          
+          <mat-card-content class="stockDetails">
+            <div>
+              <span class="priceHeaders"> Price: </span> 
+               <span class="priceValue">{{stock.currentPrice | number | currency}}</span>
+            </div> 
+            <div>
+                 <span class="priceHeaders"> Opened Price: </span>  
+                 <span class="priceValue">{{stock.openedPrice | currency}}</span>
+            </div> 
+          </mat-card-content>
+        
+            <button class="button" (click)="goToTrade(stock.name, 'buy')" ><span>Buy</span></button>
+        </mat-card>
+      <div class="pad"></div>
+    </div>
+</div>
+
+
+
+

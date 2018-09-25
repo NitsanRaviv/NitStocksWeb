@@ -1,0 +1,226 @@
+.card{
+    margin: auto;
+    width: 25%;
+}
+
+.notValid{
+    font-size: 80%;
+    color: #c82333;
+}
+
+.stockName{
+    font-size: 180%;
+    padding-left: 20px;
+    align-items: center;
+    font-family: Lucida Grande;
+    color: #23a1c8;
+}
+
+.stockCardTrade{
+    max-width: 500px;
+    border-radius: 120px;
+    background-color: #fbfbfb;
+  }
+
+.formTitle{
+font-size: 200%;
+font-family: 'Trebuchet MS';
+color: #00607e;
+}
+
+field{
+    --uiFieldPlaceholderColor: var(--fieldPlaceholderColor, #767676);
+  }
+  
+  .field__input{ 
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+  
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  
+    font-family: 'Trebuchet MS';
+    font-size: 1em;
+    color: #a3a3a3;
+  }
+  
+  .a-field .field__input:focus{
+    outline: none;
+  }
+  
+  .field__input:focus::-webkit-input-placeholder{
+    color: var(--uiFieldPlaceholderColor);
+  }
+  
+  .field__input:focus::-moz-placeholder{
+    color: var(--uiFieldPlaceholderColor);
+    opacity: 1;
+  }
+
+
+.field{
+    display: inline-block;
+    font-family: 'Trebuchet MS';
+    color: #078abe;
+  }
+  
+  .field__input{ 
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    
+  }
+  
+
+  
+  .a-field{
+    --uiFieldHeight: var(--fieldHeight, 40px);  
+    --uiFieldBorderWidth: var(--fieldBorderWidth, 2px);
+    --uiFieldBorderColor: var(--fieldBorderColor);
+  
+    --uiFieldFontSize: var(--fieldFontSize, 1em);
+    --uiFieldHintFontSize: var(--fieldHintFontSize, 1em);
+  
+    --uiFieldPaddingRight: var(--fieldPaddingRight, 15px);
+    --uiFieldPaddingBottom: var(--fieldPaddingBottom, 15px);
+    --uiFieldPaddingLeft: var(--fieldPaddingLeft, 15px);   
+  
+    position: relative;
+    box-sizing: border-box;
+    font-size: var(--uiFieldFontSize);
+    padding-top: 1em;  
+  }
+  
+  .a-field .field__input{
+    height: var(--uiFieldHeight);
+    padding: 0 var(--uiFieldPaddingRight) 0 var(--uiFieldPaddingLeft);
+    border-bottom: var(--uiFieldBorderWidth) solid var(--uiFieldBorderColor);  
+  }
+  
+  .a-field .field__input::-webkit-input-placeholder{
+    opacity: 0;
+    transition: opacity .2s ease-out;
+  }
+  
+  .a-field .field__input::-moz-placeholder{
+    opacity: 0;
+    transition: opacity .2s ease-out;
+  }
+  
+  .a-field .field__input:not(:placeholder-shown) ~ .field__label-wrap .field__label{
+    opacity: 0;
+    bottom: var(--uiFieldPaddingBottom);
+  }
+  
+  .a-field .field__input:focus::-webkit-input-placeholder{
+    opacity: 1;
+    transition-delay: .2s;
+  }
+  
+  .a-field .field__input:focus::-moz-placeholder{
+    opacity: 1;
+    transition-delay: .2s;
+  }
+  
+  .a-field .field__label-wrap{
+    box-sizing: border-box;
+    width: 100%;
+    height: var(--uiFieldHeight);	
+  
+    pointer-events: none;
+    cursor: text;
+  
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .a-field .field__label{
+    position: absolute;
+    left: var(--uiFieldPaddingLeft);
+    bottom: calc(50% - .5em);
+  
+    line-height: 1;
+    font-size: var(--uiFieldHintFontSize);
+  
+    pointer-events: none;
+    transition: bottom .2s cubic-bezier(0.9,-0.15, 0.1, 1.15), opacity .2s ease-out;
+    will-change: bottom, opacity;
+  }
+  
+  .a-field .field__input:focus ~ .field__label-wrap .field__label{
+    opacity: 1;
+    bottom: var(--uiFieldHeight);
+  }
+  
+  .field{
+    --fieldBorderColor: rgb(161, 215, 251);
+  }
+
+.pad{
+    padding-top: 10px;
+}
+
+.button
+{
+  font-size: 20px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 200;
+  margin:  auto;
+  width: 100px;
+  height:30px;
+  background: rgb(176, 202, 218);
+  border: 1px solid rgba(126, 171, 189, 0.87);
+  color: #FFF;
+}
+
+.button:hover, .button:active 
+{
+  color: rgb(176, 202, 218);
+  border-color: rgba(126, 171, 189, 0.87);
+  background: #FFF;
+}
+
+.button span 
+{
+  position: relative;
+  padding-right: 0;
+  transition: padding-right 0.5s;
+}
+
+.button span:after 
+{
+  content: ' ';  
+  position: absolute;
+  top: 0;
+  right: -15px;
+  opacity: 0;
+  width: 10px;
+  height: 10px;
+  margin-top: -7px;
+  border: 3px solid #FFF;
+  border-top: currentColor;
+  border-right: currentColor;
+  transform: rotate(-45deg);
+}
+
+.button:hover span, .button:active span 
+{
+  padding-right: 30px;
+}
+
+.button:hover span:after, .button:active span:after 
+{
+  transition: opacity 0.5s, top 0.5s, right 0.5s;
+  opacity: 1;
+  border-color: rgb(125, 204, 250);;
+  right: 0;
+  top: 50%;
+}
+
+  
+
+/* 
+Trebuchet MS */
+

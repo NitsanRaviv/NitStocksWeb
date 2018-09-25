@@ -1,0 +1,37 @@
+<!-- Menu bar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a [routerLink]="['/','home']" routerLinkActive='active'>
+            <img class="logoFit" src="src/assets/logo.png"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a [routerLink]="['/','home']" routerLinkActive='active'>HOME</a></li>
+          <li><a [routerLink]="['/','actionHistory']" routerLinkActive='active'>STATISTIC</a></li>
+          <li><a [routerLink]="['/','portfolio']" routerLinkActive='active'>PORTFOLIO</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- Mune bar separator -->
+  <div class="carousel-inner">
+    <div class="item active">
+        <section id="banner">
+            <video autoplay loop muted playsinline src="src/assets/banner.mp4"></video>
+        </section>
+    </div>
+  </div>
+
+<!-- Router -->
+<div class="container text-center">
+    <section class="wrapper">
+       <router-outlet></router-outlet>
+    </section>
+    <section class="footer"></section>
+</div> 
+
+
+
+

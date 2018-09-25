@@ -1,1 +1,77 @@
-/* You can add global styles to this file, and also import other style files */
+.priceValue{
+  font-family: Lucida Grande;
+  color: #005345;
+}
+
+.priceHeaders{
+  font-size: 110%;
+  font-family: Lucida Grande;
+  color: #0c8cb3;
+}
+
+.divider{
+  color: #23a1c8;
+}
+
+.stockDetails{
+  padding-top: 10px;
+}
+
+.pad{
+  padding: 20px;
+}
+
+table {
+  background: rgb(234, 244, 247);
+  border-radius: 5px;
+  overflow: hidden;
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+
+table thead tr {
+  background: #477b85;
+}
+table tbody tr {
+  height: 40px;
+}
+table tbody tr:last-child {
+  border: 0;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #e0f4ff;
+}
+
+tbody tr {
+  font-size: 15px;
+  text-align: center;
+  color: #000000;
+  font-family: Lucida Grande;
+  line-height: 1.2;
+  
+}
+
+th {
+  font-size: 25px;
+  color: #ffffff;
+  line-height: 2;
+  font-family: Lucida Grande;
+  font-weight: unset;
+}
+
+tbody tr:hover {
+  color: #376d99;
+  background-color: #ffffff;
+  font-family: Lucida Grande;
+  cursor: pointer;
+}
+
+.column {
+  width: 200px;
+  border-spacing: 1000px;
+}
+
+
+  

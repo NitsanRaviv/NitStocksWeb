@@ -1,0 +1,17 @@
+.navbar {
+    margin-bottom: 0;
+    border: 0;
+    font-size: 12px;
+    letter-spacing: 3px;
+    opacity: 0.9;
+}
+
+.bannerFit{ 
+    opacity: 0.6;
+}
+
+.logoFit{ 
+    width: 160px;
+    height: 60px;
+    padding-bottom: 20px;
+}
