@@ -1,5 +1,6 @@
 # NitStocks
-dddd
+
+Client (Angular 6) Server (NodeJS) stocks management application (TypeScript)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.1.
 
