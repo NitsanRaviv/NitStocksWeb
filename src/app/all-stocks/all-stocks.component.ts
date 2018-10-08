@@ -32,12 +32,7 @@ export class AllStocksComponent implements OnInit {
    }
 
    stockRising(openedPrice: number, currentPrice: number){
-     if(currentPrice >= openedPrice){
-       return true;
-     }
-     else{
-       return false;
-     }
+       return currentPrice >= openedPrice;
    }
 
    goToTrade(selectedStockName: String, type: string){
